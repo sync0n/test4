@@ -27,20 +27,6 @@ variable location {
   default     = "westeurope"
 }
 
-variable log_analytics_workspace_name {
-  default = "testLogAnalyticsWorkspaceName"
-}
-
-# refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
-variable log_analytics_workspace_location {
-  default = "eastus"
-}
-
-# refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing
-variable log_analytics_workspace_sku {
-  default = "PerGB2018"
-}
-
 variable subnet_name {
   description = "subnet id where the nodes will be deployed"
   default     = "runitoncloud-subnet"
@@ -58,7 +44,7 @@ variable subnet_cidr {
 
 variable kubernetes_version {
   description = "version of the kubernetes cluster"
-  default     = "1.16.10"
+  default     = "1.19.3"
 }
 
 variable "vm_size" {
@@ -88,16 +74,6 @@ variable "max_count" {
   default     = 2
   description = "Maximum Node Count"
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
